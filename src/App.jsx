@@ -8,6 +8,9 @@ import AboutTeam from "./pages/about/Team";
 import Contacts from "./pages/Contacts";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/Post";
+import Login from "./pages/Login"
+import StoreWall from "pages/shop";
+import Product from "./pages/shop/Product";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 
@@ -30,7 +33,12 @@ function App() {
                 {/*BLOG-POST*/}
                 <Route path="/blog/:postId" element={<BlogPost />} />
                 {/*CONTACTS*/}
-              <Route path="/contacts" element={<Contacts />} />
+            <Route path="/contacts" element={<Contacts />} />
+                 {/*LOGIN*/}
+            <Route path="/login" element={<Login />} />
+                {/*STORE*/}
+            <Route path="/shop" element={<StoreWall />} />
+             <Route path="/product/:productId" element={<Product />} />
                 {/*404*/}
               <Route path="/*" element={<NotFound/>} />
           </Route>
